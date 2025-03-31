@@ -4,18 +4,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DependsOnTest {
-    @Test(priority = 0)
+    @Test()
     public void oLevel(){
         System.out.println("O/Level");
         Assert.fail();
     }
 
-    @Test(priority = 1)
+    @Test(dependsOnMethods = "oLevel")
     public void aLevel(){
         System.out.println("A/Level");
     }
 
-    @Test(priority = 2)
+    @Test(dependsOnMethods = {"oLevel","aLevel"},alwaysRun = true)
     public void campus(){
         System.out.println("Campus");
     }
