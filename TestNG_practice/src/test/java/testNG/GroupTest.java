@@ -4,12 +4,12 @@ import org.testng.annotations.Test;
 
 public class GroupTest {
     //S= smoke , R= Regression
-    @Test
+    @Test(groups = {"S","R"})
     public void test01(){
         System.out.println("This is smoke and regression test case");
     }
 
-    @Test
+    @Test(groups ={"R"} )
     public void test02(){
         System.out.println("This is regression test case");
     }
@@ -19,12 +19,12 @@ public class GroupTest {
         System.out.println("This is not smoke or regression");
     }
 
-    @Test
+    @Test(groups = {"S"})
     public void test04(){
         System.out.println("This is smoke test case");
     }
 
-    @Test
+    @Test(groups = {"S","R"})
     public void test05(){
         System.out.println("This is smoke and regression test case");
     }
