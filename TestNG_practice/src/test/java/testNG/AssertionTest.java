@@ -27,4 +27,18 @@ public class AssertionTest {
         System.out.println("After to valuesNotEqualCheck assertion ");
     }
 
+    @Test(priority = 2)
+    public void trueConditionCheck(){
+        System.out.println("Prior to trueConditionCheck assertion ");
+        Assert.assertTrue(actualValue.startsWith("G"),"Condition return a false");
+        System.out.println("After to trueConditionCheck assertion ");
+    }
+
+    @Test(priority = 3)
+    public void falseConditionCheck(){
+        System.out.println("Prior to falseConditionCheck assertion ");
+        Assert.assertFalse(actualValue.isBlank(),"Condition return a true");
+        System.out.println("After to falseConditionCheck assertion ");
+    }
+
 }
