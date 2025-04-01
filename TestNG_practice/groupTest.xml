@@ -2,6 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="GroupTest Suite" verbose="2">
     <test name="Group Test Cases">
+        <groups>
+            <run>
+               <!-- <include name="S"/>
+                <include name="R"/>-->
+                <exclude name="S"/>
+            </run>
+        </groups>
         <classes>
             <class name="testNG.GroupTest"/>
         </classes>
