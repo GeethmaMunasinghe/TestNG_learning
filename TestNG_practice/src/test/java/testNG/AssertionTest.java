@@ -16,7 +16,15 @@ public class AssertionTest {
         String expectedValue="Geethma";
         System.out.println("Prior to equalsCheck assertion ");
         Assert.assertEquals(actualValue,expectedValue,"Value miss matched");
-        System.out.println("After equalsCheck assertion ");
+        System.out.println("After to equalsCheck assertion ");
+    }
+
+    @Test(priority = 1)
+    public void valuesNotEqualCheck(){
+        String expectedValue="Learning TestNG";
+        System.out.println("Prior to equalsCheck assertion ");
+        Assert.assertNotEquals(actualValue,expectedValue,"Value matched");
+        System.out.println("After to valuesNotEqualCheck assertion ");
     }
 
 }
