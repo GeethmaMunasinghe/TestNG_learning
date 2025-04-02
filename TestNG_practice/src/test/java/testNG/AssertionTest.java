@@ -18,8 +18,10 @@ public class AssertionTest {
         String expectedValue="Geethma";
         //String expectedValue="Geethma123";
         System.out.println("Prior to equalsCheck assertion ");
-        Assert.assertEquals(actualValue,expectedValue,"Value miss matched");
+        softAssert.assertEquals(actualValue,expectedValue,"Values miss matched.");
+        //Assert.assertEquals(actualValue,expectedValue,"Value miss matched");
         System.out.println("After to equalsCheck assertion ");
+        softAssert.assertAll();
     }
 
     @Test(priority = 1)
