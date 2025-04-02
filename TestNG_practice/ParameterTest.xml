@@ -20,5 +20,11 @@
         </classes>
     </test>
 
+    <test name="Params3">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testNG.Parameter.ParameterTest03"/>
+        </classes>
+    </test>
 
 </suite>
